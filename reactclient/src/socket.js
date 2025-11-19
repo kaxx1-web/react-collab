@@ -1,6 +1,6 @@
 import { io } from "socket.io-client";
 
 // Replace this with your Render backend URL:
-export const socket = io("https://collaborative-drawing.onrender.com", {
+export const socket = io("https://react-collab.onrender.com", {
   transports: ["websocket"],
 });

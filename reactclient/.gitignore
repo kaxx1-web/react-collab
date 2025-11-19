@@ -1,24 +1,14 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+# Ignore node_modules folders specifically in client and server
+# This keeps the repo from tracking dependencies in those sub-projects.
 
-node_modules
-dist
-dist-ssr
-*.local
+# Ignore all node_modules directories inside client and server (including nested)
+/client/**/node_modules/
+/client/node_modules/
+/server/**/node_modules/
+/server/node_modules/
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+# Also ignore accidental singular folder name if it exists
+/client/**/node_module/
+/server/**/node_module/
+
+# You can still use individual .gitignore files inside subfolders for more rules.
